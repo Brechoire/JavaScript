@@ -25,6 +25,7 @@ for (i = 0; i < addClass.length; i++){
 
 }
 
+// Vérification de la taille du mot de passe.
 document.getElementById("mot_de_passe").addEventListener("input", function (e){
     var mdp         = e.target.value;
     var longueurMdp = "faible";
@@ -39,7 +40,7 @@ document.getElementById("mot_de_passe").addEventListener("input", function (e){
         longueurMdp = "";
     }
     var aideMdp = document.getElementById("aideMDP");
-    aideMdp.textContent = "La longueur du mot de passe est " + longueurMdp;
+    aideMdp.textContent = "La longueur du mot de passe est " + longueurMdp + " "  + "(" + mdp.length +" caractère(s))";
     aideMdp.style.color = couleurMsg;
     
 });
